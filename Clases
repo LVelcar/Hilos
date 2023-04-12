@@ -1,0 +1,71 @@
+// Clase Hilos.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package hilos;
+
+/**
+ *
+ * @author luisv
+ */
+public class Hilos {
+
+    public static void main(String[] args) {
+        (new PrimerHilo()).start();
+        (new SegundoHilo()).start();
+        (new TercerHilo()).start();
+    }
+}
+
+// Clase PrimerHilo.java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package hilos;
+
+/**
+ *
+ * @author luisv
+ */
+public class PrimerHilo extends Thread{
+    public void run(){
+        System.out.println("Primer Hilo Ejecutandose");
+    }
+}
+
+// Clase SegundoHilo.Java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package hilos;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author luisv
+ */
+public class SegundoHilo extends Thread{
+     public void run(){
+        JOptionPane.showMessageDialog(null,"Segundo Hilo Ejecuntándose");
+    }
+}
+
+// Clase TercerHilo.Java
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package hilos;
+
+/**
+ *
+ * @author luisv
+ */
+public class TercerHilo extends Thread{
+    public void run(){
+        System.out.println("Tercer Hilo Ejecutándose");
+    }
+}
